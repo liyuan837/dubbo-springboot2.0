@@ -1,0 +1,20 @@
+###服务端口号、服务名
+server:
+  port: 8081
+  application:
+    name: user-web
+###dubbo配置
+dubbo:
+  ###dubbo服务名
+  application:
+    name: user-web
+  ###dubbo协议
+  protocol:
+    name: dubbo
+    port: 20880
+  ###注册中心地址
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  ###dubbo需要使用到提供者服务的包路径
+  scan:
+    base-packages: com.liyuan.web.controller
